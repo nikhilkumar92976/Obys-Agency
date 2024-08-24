@@ -61,15 +61,25 @@ function loader() {
         duration: 2,
         delay: 2.5,
     })
+    tl.from("#nav",{
+       opacity:0
+    })
+    tl.from(".lines h1, #hero h2, #hero h3",{
+        y:100,
+        stagger: 0.2,
+        duration: 0.3,
+    })
 }
 loader()
 
 function curser() {
-    var page1 = document.querySelector("#page1");
-    var curser = document.querySelector("#curser");
-    page1.addEventListener("mousemove", function (dets) {
-        curser.style.left = dets.clientX + "px";
-        curser.style.top = dets.clientY + "px";
+    
+    document.addEventListener("mousemove", function (dets) {
+        gsap.to("#curser",{
+            left:dets.x,
+            top:dets.y
+        })
     })
+    Shery.makeMagnet("#nav-part2 h4");
 }
 curser();

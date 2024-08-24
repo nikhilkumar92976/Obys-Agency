@@ -139,15 +139,14 @@ body {
     font-size: 1vw;
 }
 #curser{
-    height: 7vh;
-    width: 3.2vw;
+    height: 3vw;
+    width: 3vw;
     border-radius: 50%;
-    background-color: #151515;
-    border: 1px solid white;
-    position: absolute;
-    transition: all linear .1s;
+    border: 1px solid rgba(255, 255, 255, 0.603);
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: difference;
     transform: translate(-50%,-50%);
-    display: 0;
 }
 
 #main {
@@ -159,6 +158,64 @@ body {
     width: 100%;
     background-color: #151515;
 }
+#page1 #nav{
+    padding: 3.7vw 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+#nav #nav-part2{
+    display: flex;
+    font-family: "plain";
+    gap: 3vw;
+}
+#nav-part2 h4{
+    font-size: 1.1vw;
+    font-weight: 300;
+}
+.lines{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 99999;
+}
+.lines h1{
+    font-size: 7.7vw;
+    font-family: "plain";
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 7.7vw;
+    width: 73%;
+    /* background-color: red; */
+    margin-left: 27%;
+}
+.lines:nth-child(2){
+    margin-top: 10vh;
+}
+#hero h2{
+    border-bottom: .6vw solid white ;
+    transform: all ease 0.3s;
+}
+#hero h2, #hero h3{
+    font-size: 7.7vw;
+    font-family: "plain";
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 7.7vw;
+    
+}
+.lines:nth-child(4){
+    margin-right: 18.6vw;
+    overflow: hidden;
+}
+#hero h2:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    font-weight: 500;
+    border-bottom: none;
+}
+
+
 
 #page2 {
     height: 100vh;
