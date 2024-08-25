@@ -61,7 +61,7 @@ function loader() {
         duration: 2,
         delay: 2.5,
     })
-    tl.from("#nav",{
+    tl.from("#nav , #num p",{
        opacity:0
     })
     tl.from(".lines h1, #hero h2, #hero h3",{

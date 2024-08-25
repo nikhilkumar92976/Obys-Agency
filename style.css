@@ -151,6 +151,7 @@ body {
 
 #main {
     position: relative;
+    background-color: #151515;
 }
 
 #page1 {
@@ -190,7 +191,7 @@ body {
     margin-left: 27%;
 }
 .lines:nth-child(2){
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 #hero h2{
     border-bottom: .6vw solid white ;
@@ -204,7 +205,7 @@ body {
     line-height: 7.7vw;
     
 }
-.lines:nth-child(4){
+.lines:nth-child(5){
     margin-right: 18.6vw;
     overflow: hidden;
 }
@@ -214,17 +215,45 @@ body {
     font-weight: 500;
     border-bottom: none;
 }
+#first{
+    width: 30%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+#first h3{
+    font-family: "plain";
+    font-size: 1.1vw;
+    font-weight: 100;
+    line-height: 1.1vw;
+}
+#num p{
+    font-size: 3.3vw;
+    font-family: "silk serif";
+    position: absolute;
+    width: 5vw;
+    /* background-color: aqua; */
+    margin-left: 21vw;
+}
+
 
 
 
 #page2 {
     height: 100vh;
     width: 100%;
-    background-color: aqua;
+    background-color:#151515;
+    position: fixed;
 }
-
-#page3 {
-    height: 100vh;
+#page2 #video-box{
+    height: 72vh;
+    width: 70%;
+    background-color: #151515;
+}
+#page2 #video-box video{
+    height: 100%;
     width: 100%;
-    background-color: rgb(255, 102, 0);
+    object-fit: cover;
+    position: relative;
+    left:43% ;
 }
