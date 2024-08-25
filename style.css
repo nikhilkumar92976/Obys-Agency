@@ -368,3 +368,71 @@ body {
     font-size: 1vw;
     font-weight: 500;
 }
+
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 11vh ;
+    
+}
+.elem{
+    height: 9.1vw;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.elem h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-family: "plain";
+    -webkit-text-stroke: 1px white;
+    font-weight: 100;
+    color: transparent;
+    display: inline-block;
+    margin-right: 3vw;
+    animation-name: anime1;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.elem span{
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+@keyframes anime1 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2{
+    height: 9.1vw;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.elem2 h1{
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-family: "plain";
+    -webkit-text-stroke: 1px white;
+    font-weight: 100;
+    color: transparent;
+    display: inline-block;
+    margin-right: 3vw;
+    animation-name: anime1;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.elem2 span{
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
