@@ -154,6 +154,8 @@ body {
     background-color: #151515;
 }
 
+
+
 #page1 {
     height: 100vh;
     width: 100%;
@@ -238,22 +240,131 @@ body {
 
 
 
-
-#page2 {
+#page2{
     height: 100vh;
     width: 100%;
-    background-color:#151515;
-    position: fixed;
-}
-#page2 #video-box{
-    height: 72vh;
-    width: 70%;
     background-color: #151515;
+    padding-top: 10vh ;
+    position: relative;
 }
-#page2 #video-box video{
+#video-box{
+    height: 70vh;
+    width: 70vw;
+    position: relative;
+    left: 30%;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+}
+#video-box video{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+#video-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+#page2 #gola{
+    height: 11vw;
+    width: 11vw;
+    background-color: #FFA63D;
+    border-radius: 50%;
+    position: absolute;
+    left: 70%;
+    top: -13%;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2vw;
+}
+#page2 #gola i{
+    position: absolute;
+    z-index: 99999;
+}
+
+
+
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+
+
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+#page4-contant{
+    width: 72%;
     position: relative;
-    left:43% ;
+    left: 28%;
+}
+#page4-contant h1{
+    font-size: 8vw;
+    font-family: "plain";
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#page4-contant #underline{
+    height: .1vh;
+    width: 100%;
+    background-color: white;
+    margin: 2vw 0;
+}
+#page4-contant>p{
+    font-size: 2.3vw;
+    font-family: "plain";
+    width: 60%;
+    font-weight: 300;
+    margin-top: 8vh;
+
+}
+#page4 #flex-contant{
+    display: flex;
+    margin-top: 10vh;
+}
+#page4 #flex-contant img{
+    width: 46%;
+}
+#page4 #flex-contant p{
+    font-size: 1.1vw;
+    font-family: "plain";
+    width: 28%;
+    line-height: 1.6vw;
+    margin-left: 2vw;
+}
+#bluediv{
+    background-color: #3F7DF4;
+    width: 62%;
+    padding: 3vw 3.4vw;
+    position: relative;
+    margin-top: -12%;
+    margin-left: 30%;
+}
+#bluediv .sections{
+    display: flex;
+    align-items: flex-start;
+    gap: 5vw;
+    font-family: "plain";
+    margin: 1vw 0;
+    border-bottom: .1vw solid white;
+    padding: 1.4vw 0;
+}
+#bluediv .sections h3{
+    font-size: 1.8vw;
+    font-weight: 500;
+    width: 13vw;
+    
+}
+#bluediv .sections p{
+    font-size: 1vw;
+    font-weight: 500;
 }

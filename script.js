@@ -61,11 +61,11 @@ function loader() {
         duration: 2,
         delay: 2.5,
     })
-    tl.from("#nav , #num p",{
-       opacity:0
+    tl.from("#nav , #num p", {
+        opacity: 0
     })
-    tl.from(".lines h1, #hero h2, #hero h3",{
-        y:100,
+    tl.from(".lines h1, #hero h2, #hero h3", {
+        y: 100,
         stagger: 0.2,
         duration: 0.3,
     })
@@ -73,13 +73,30 @@ function loader() {
 loader()
 
 function curser() {
-    
+
     document.addEventListener("mousemove", function (dets) {
-        gsap.to("#curser",{
-            left:dets.x,
-            top:dets.y
+        gsap.to("#curser", {
+            left: dets.x,
+            top: dets.y
         })
     })
     Shery.makeMagnet("#nav-part2 h4");
 }
 curser();
+
+function video() {
+    var img = document.querySelector("#page2 #video-box img");
+    var box = document.querySelector("#page2");
+    var count = 0;
+    box.addEventListener("click", function () {
+        if (count == 0) {
+            img.style.opacity = 0;
+            count = 1;
+        }
+        else {
+            img.style.opacity = 1;
+            count = 0;
+        }
+    })
+}
+video();
