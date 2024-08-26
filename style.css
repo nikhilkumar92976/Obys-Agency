@@ -313,7 +313,16 @@ body {
     text-transform: uppercase;
     font-weight: 500;
 }
-#page4-contant #underline{
+#page4-contant h1::before{
+    content: "03";
+    font-family: "silk serif";
+    position: absolute;
+    font-size:3.4vw ;
+    font-weight: 100;
+    left: -8.4%;
+    top: 0.5%;
+}
+.underline{
     height: .1vh;
     width: 100%;
     background-color: white;
@@ -348,6 +357,7 @@ body {
     position: relative;
     margin-top: -12%;
     margin-left: 30%;
+    margin-bottom: 10vw;
 }
 #bluediv .sections{
     display: flex;
@@ -378,7 +388,7 @@ body {
     
 }
 .elem{
-    height: 9.1vw;
+    height: 9.2vw;
     white-space: nowrap;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -393,7 +403,7 @@ body {
     display: inline-block;
     margin-right: 3vw;
     animation-name: anime1;
-    animation-duration: 20s;
+    animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -411,7 +421,7 @@ body {
     }
 }
 .elem2{
-    height: 9.1vw;
+    height: 9.2vw;
     white-space: nowrap;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -426,7 +436,7 @@ body {
     display: inline-block;
     margin-right: 3vw;
     animation-name: anime1;
-    animation-duration: 20s;
+    animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: reverse;
@@ -435,4 +445,55 @@ body {
     font-family: "silk serif";
     -webkit-text-stroke: 1px white;
     color: transparent;
+}
+
+
+
+
+#footer{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    padding-left: 30vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    position: relative;
+}
+#footer h1{
+    font-size: 7.6vw;
+    font-family: "plain";
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#footer #footer-cotant{
+    display: flex;
+    gap: 11vw;
+    margin-bottom: 5.4vw;
+    margin-top: 3vw;
+}
+#footer-cotant .parts h6{
+    font-size: 1.2vw;
+    font-weight: 100;
+    font-family: "plain";
+    margin-bottom: 2vw;
+}
+#footer-cotant .parts h5{
+    font-size: 1.9vw;
+    font-weight: 100;
+    font-family: "plain";
+}
+#footer>h3{
+    font-family: "plain";
+    font-weight: 100;
+    font-size: 1.2vw;
+    margin-top: 2.7vw;
+}
+#footer h1::before{
+    content: "04";
+    font-family: "silk serif";
+    position: absolute;
+    font-size:3.4vw ;
+    font-weight: 100;
+    left: 22.5%;
+    top: 12%;
 }
