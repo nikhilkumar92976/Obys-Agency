@@ -292,6 +292,123 @@ body {
     min-height: 100vh;
     width: 100%;
     background-color: #151515;
+    position: relative;
+    margin-bottom: 20vh;
+}
+#page3 h1{
+    margin-top: 5vw;
+    font-size: 8vw;
+    font-family: "plain";
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 28%;
+}
+#page3 .underline{
+    margin-left: 29%;
+}
+#page3 h1::before{
+    content: "02";
+    font-family: "silk serif";
+    position: absolute;
+    font-size:3.4vw ;
+    font-weight: 100;
+    left: 22%;
+    top: 2%;
+}
+#image-contanor{
+    position: relative;
+    padding: 1vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#page3 .cutimage{
+  
+    height: 39vw;
+    width: 32vw;
+    background-color: #3F7DF4;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 0 2vw;
+}
+#page3 .cutimage:nth-child(1){
+    height: 30vw;
+    width: 23vw;
+    margin-bottom: 19vh;
+}
+.cutimage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page3-circle1{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23vh;
+    margin-left: 7vw;
+    position: relative;
+}
+
+.page3-circle1 svg{
+    height: 35%;
+}
+.page3-circle2{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page3-circle2 svg{
+    height: 35%;
+    rotate: -45deg;
+}
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    scale: 0;
+    transition: all ease 0.3s;
+}
+.circle-in p{
+    color: #151515;
+    padding: 2.9vw;
+    font-family: "plain";
+    font-size: 1.1vw;
+    scale: 0;
+    transition: all ease 0.3s;
+    transition-delay: .3s;
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+.page3-circle1:hover p{
+    scale: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover p{
+    scale: 1;
 }
 
 
@@ -301,6 +418,7 @@ body {
     min-height: 100vh;
     width: 100%;
     background-color: #151515;
+    margin-bottom: 10vw;
 }
 #page4-contant{
     width: 72%;
@@ -326,7 +444,7 @@ body {
     height: .1vh;
     width: 100%;
     background-color: white;
-    margin: 2vw 0;
+    margin: 2vw 0;   
 }
 #page4-contant>p{
     font-size: 2.3vw;
@@ -496,4 +614,9 @@ body {
     font-weight: 100;
     left: 22.5%;
     top: 12%;
+}
+
+._canvas_container{
+    z-index: 99999999 !important;
+    pointer-events: none;
 }
