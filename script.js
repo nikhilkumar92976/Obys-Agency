@@ -82,24 +82,7 @@ function curser() {
     })
     Shery.makeMagnet("#nav-part2 h4");
 }
-// curser();
-
-function video() {
-    var img = document.querySelector("#page2 #video-box img");
-    var box = document.querySelector("#page2");
-    var count = 0;
-    box.addEventListener("click", function () {
-        if (count == 0) {
-            img.style.opacity = 0;
-            count = 1;
-        }
-        else {
-            img.style.opacity = 1;
-            count = 0;
-        }
-    })
-}
-video();
+curser();
 
 function Sheryanimation() {
     Shery.imageEffect(".cutimage", {
@@ -109,3 +92,70 @@ function Sheryanimation() {
     })
 }
 Sheryanimation()
+
+function videofun() {
+    var videobox = document.querySelector("#video-box");
+    var video = document.querySelector("#video-box video");
+    videobox.addEventListener("mouseenter", function () {
+        videobox.addEventListener("mousemove", function (dets) {
+            gsap.to("#curser", {
+                opacity: 0
+            })
+            gsap.to("#gola", {
+                left: dets.x - 570,
+                y: dets.y - 300
+            })
+        })
+    })
+    videobox.addEventListener("mouseleave", function (dets) {
+        gsap.to("#curser", {
+            opacity: 1
+        })
+        gsap.to("#gola", {
+            left: "70%",
+            y: "-13%"
+        })
+    })
+    var flag = 0
+    videobox.addEventListener("click", function () {
+        if (flag == 0) {
+            video.play()
+            video.style.opacity = 1
+            document.querySelector("#gola").innerHTML = `<i class="ri-pause-mini-fill"></i>`
+            gsap.to("#gola", {
+                scale: 0.5
+            })
+            flag = 1
+        }
+        else {
+            video.pause()
+            video.style.opacity = 0
+            document.querySelector("#gola").innerHTML = `<i class="ri-play-large-fill"></i>`
+            gsap.to("#gola", {
+                scale: 1
+            })
+            flag = 0
+        }
+    })
+}
+videofun()
+
+function flaganimation(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#flag",{
+            x:dets.x,
+            y:dets.y
+        })
+    })
+    document.querySelector("#hero").addEventListener("mouseenter",function(){
+        gsap.to("#flag",{
+            opacity:1
+        })
+    })
+    document.querySelector("#hero").addEventListener("mouseleave",function(){
+        gsap.to("#flag",{
+            opacity:0
+        })
+    })
+}
+flaganimation()
