@@ -302,6 +302,14 @@ body {
     font-weight: 500;
     margin-left: 28%;
 }
+/* #page3 i{
+    margin-top: 5vw;
+    font-size: 8vw;
+    font-family: "plain";
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 28%;
+} */
 #page3 .underline{
     margin-left: 29%;
 }
@@ -368,6 +376,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-bottom: 10vw;
 }
 
 .page3-circle2 svg{
