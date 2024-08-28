@@ -1,7 +1,28 @@
+@font-face {
+  font-family: "Plain Light";
+  src: url(fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+  font-family: "Plain Light";
+  src: url(fonts/plain-regular-webfont.ttf);
+}
+
+@font-face {
+  font-family: "silk serif";
+  src: url(fonts/silkserif-lightitalic-webfont.ttf);
+}
+
+@font-face {
+  font-family: "silk serif";
+  src: url(fonts/silkserif-regularitalic-webfont.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: white;
 }
 
@@ -35,9 +56,15 @@ body {
 }
 
 #loader #div1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 #loader #div1 h1 {
@@ -80,9 +107,15 @@ body {
 
 #div3 {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   gap: 1.5vw;
 }
 
@@ -92,9 +125,46 @@ body {
   font-size: 7vw;
   font-weight: 500;
   /* color: #151515; */
-  animation: anime;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  -webkit-animation: anime;
+          animation: anime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes anime {
+  0% {
+    font-family: "plain light";
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 1;
+  }
+
+  48% {
+    font-family: "plain light";
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+  }
+
+  50% {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 500;
+    color: transparent;
+    opacity: 1;
+  }
+
+  100% {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 500;
+    color: transparent;
+    opacity: 0;
+  }
 }
 
 @keyframes anime {
@@ -150,7 +220,9 @@ body {
   position: fixed;
   /* z-index: 991; */
   mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #main {
@@ -170,11 +242,17 @@ body {
   position: relative;
   z-index: 99999;
   padding: 3.7vw 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #nav #nav-part2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "plain";
   gap: 3vw;
@@ -187,8 +265,12 @@ body {
 
 .lines {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   z-index: 99999;
 }
@@ -210,7 +292,9 @@ body {
 
 #hero h2 {
   border-bottom: 0.6vw solid white;
-  transform: all ease 0.3s;
+  -webkit-transform: all ease 0.3s;
+      -ms-transform: all ease 0.3s;
+          transform: all ease 0.3s;
 }
 
 #hero h2,
@@ -237,8 +321,12 @@ body {
 #first {
   width: 30%;
   /* background-color: red; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #first h3 {
@@ -278,7 +366,8 @@ body {
 #video-box video {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0;
 }
 
@@ -291,9 +380,15 @@ body {
   left: 70%;
   top: -13%;
   z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 2.2vw;
 }
 
@@ -361,7 +456,8 @@ body {
   background-color: #3f7df4;
   position: relative;
   overflow: hidden;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin: 0 2vw;
   margin-top: 6vw;
 }
@@ -375,8 +471,10 @@ body {
 .cutimage img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #third {
@@ -387,9 +485,15 @@ body {
   width: 25vw;
   border-radius: 50%;
   border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 23vh;
   margin-left: 7vw;
   position: relative;
@@ -404,9 +508,15 @@ body {
   width: 25vw;
   border-radius: 50%;
   border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   margin-bottom: 20vw;
 }
@@ -423,11 +533,19 @@ body {
   left: 0;
   top: 0;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 50%;
   scale: 0;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
 
@@ -437,8 +555,12 @@ body {
   font-family: "plain";
   font-size: 1.1vw;
   scale: 0;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
-  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+       -o-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .page3-circle1:hover .circle-in {
@@ -503,6 +625,8 @@ body {
 }
 
 #page4 #flex-contant {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 10vh;
 }
@@ -530,8 +654,12 @@ body {
 }
 
 #bluediv .sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 5vw;
   font-family: "plain";
   margin: 1vw 0;
@@ -573,10 +701,14 @@ body {
   color: transparent;
   display: inline-block;
   margin-right: 3vw;
-  animation-name: anime1;
-  animation-duration: 25s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: anime1;
+          animation-name: anime1;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .elem span {
@@ -585,13 +717,27 @@ body {
   color: transparent;
 }
 
-@keyframes anime1 {
+@-webkit-keyframes anime1 {
   from {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   to {
-    transform: translateX(calc(-100% - 20px));
+    -webkit-transform: translateX(calc(-100% - 20px));
+            transform: translateX(calc(-100% - 20px));
+  }
+}
+
+@keyframes anime1 {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  to {
+    -webkit-transform: translateX(calc(-100% - 20px));
+            transform: translateX(calc(-100% - 20px));
   }
 }
 
@@ -611,10 +757,14 @@ body {
   color: transparent;
   display: inline-block;
   margin-right: 3vw;
-  animation-name: anime1;
-  animation-duration: 25s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: anime1;
+          animation-name: anime1;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   animation-direction: reverse;
 }
 
@@ -642,6 +792,8 @@ body {
 }
 
 #footer #footer-cotant {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 11vw;
   margin-bottom: 5.4vw;
@@ -688,7 +840,9 @@ body {
   position: absolute;
   left: 0;
   top: 0%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   opacity: 0;
 }
 
@@ -825,8 +979,13 @@ body {
     margin-bottom: 27vw;
   }
   #image-contanor{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #page3 .cutimage {
     height: 120vw;
@@ -834,7 +993,8 @@ body {
     background-color: #3f7df4;
     position: relative;
     overflow: hidden;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin: 5vw 4vw;
   }
   .page3-circle2{
@@ -856,7 +1016,8 @@ body {
     background-color: #3f7df4;
     position: relative;
     overflow: hidden;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin: 7vw 4vw;
 
   }
@@ -904,8 +1065,13 @@ body {
   }
   
   #page4 #flex-contant {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 5vh;
 
   }
@@ -936,8 +1102,12 @@ body {
   }
   
   #bluediv .sections {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 20vw;
     font-family: "plain";
     margin: 9vw 0;
@@ -1003,8 +1173,13 @@ body {
   }
   
   #footer #footer-cotant {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 11vw;
     margin-bottom: 5.4vw;
     margin-top: 3vw;
