@@ -62,12 +62,13 @@ function loader() {
         delay: 2.5,
     })
     tl.from("#nav , #num p", {
-        opacity: 0
+        opacity: 0,
+        duration: 0.2,
     })
     tl.from(".lines h1, #hero h2, #hero h3", {
-        y: 100,
+        y: 120,
         stagger: 0.2,
-        duration: 0.3,
+        duration: 0.2,
     })
 }
 loader()
